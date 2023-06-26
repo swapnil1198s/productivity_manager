@@ -1,0 +1,31 @@
+.tracker{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    margin: 2vh 2vw 2vh 2vw;
+}
+.startBtn{
+    background-image: url(../images/start_btn.png);
+    margin:2vw;
+    width:13vw;
+    height: 13vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+.stopBtn{
+    background-image: url(../images/stop_btn.png);
+    width:15vw;
+    height: 15vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.startBtn:hover, .stopBtn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
