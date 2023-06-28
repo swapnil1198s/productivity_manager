@@ -1,0 +1,186 @@
+.foot{
+    width: auto;
+    padding: 5vh;
+    margin: 0;
+    background-image: url('../images/nightsky.jpeg') ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    align-items: center;
+    text-align: center;
+}
+
+.a_few_words p{
+    color: white;
+    font-size: 3vh;
+    font-weight: 500;
+    margin: 0;
+}
+
+.digital_footprint{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social{
+    background-color: white;
+    padding: 1vh 2vh;
+    display: flex;
+    justify-content: center;
+    margin: 2vh;
+    border-radius: 20vh;
+    align-items: center;
+}
+
+a{
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.social p{
+    color: rgb(49, 49, 49);
+    font-size: 2vh;
+    margin: 0;
+}
+
+#github_icon{
+    width: 5vh;
+    background-image: url('../images/icons/github.png') ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#email_icon{
+    width: 5vh;
+    background-image: url('../images/icons/gmail.png') ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 1vh;
+}
+#LinkedIn_icon{
+    width: 5vh;
+    background-image: url('../images/icons/linkedin.png') ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+/*Smartphone styling*/
+@media (max-width: 650px){
+    .foot{
+        width: auto;
+        padding: 3vh;
+        margin: 0;
+        background-image: url('../images/nightsky.jpeg') ;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        align-items: center;
+    }
+    .a_few_words p{
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 1vh;
+    }
+    .digital_footprint{
+        display: flex;
+        flex-direction: column;
+    }
+    .social p{
+        color: rgb(49, 49, 49);
+        font-size: 15px;
+        margin: 0;
+    }
+    #github_icon{
+        width: 4vh;
+        background-image: url('../images/icons/github.png') ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    #email_icon{
+        width: 4vh;
+        background-image: url('../images/icons/gmail.png') ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-right: 1vh;
+    }
+    #LinkedIn_icon{
+        width: 4vh;
+        background-image: url('../images/icons/linkedin.png') ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .social{
+        background-color: white;
+        padding: 1vh 2vh;
+        display: flex;
+        justify-content: center;
+        margin: 1vh;
+        border-radius: 20vh;
+        align-items: center;
+    }
+}
+
+/*Tablet styling*/
+@media (max-width: 900px){
+    .foot{
+        width: auto;
+        padding: 3vh;
+        margin: 0;
+        background-image: url('../images/nightsky.jpeg') ;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        align-items: center;
+    }
+    .a_few_words p{
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+        margin: 1vh;
+    }
+    
+    .social p{
+        color: rgb(49, 49, 49);
+        font-size: 15px;
+        margin: 0;
+    }
+    #github_icon{
+        width: 4vh;
+        background-image: url('../images/icons/github.png') ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    #email_icon{
+        width: 4vh;
+        background-image: url('../images/icons/gmail.png') ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-right: 1vh;
+    }
+    #LinkedIn_icon{
+        width: 4vh;
+        background-image: url('../images/icons/linkedin.png') ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .social{
+        background-color: white;
+        padding: 1vh 2vh;
+        display: flex;
+        justify-content: center;
+        margin: 1vh;
+        border-radius: 20vh;
+        align-items: center;
+    }
+}
