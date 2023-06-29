@@ -70,13 +70,14 @@ h1{
     border-radius: 5px;
     width: 10vw;
 }
-.log{
+.logContainer{
     height: 70vh;
     width: 80vw;
     background-color: rgba(255, 255, 255, 0.474);
     margin: 2vh 0;
     border-radius: 5px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .project{
@@ -117,17 +118,22 @@ h1{
     cursor: pointer;
 }
 
-.logItem{
-    margin: 1vh 1vw;
-    background-color: white;
-    font-size: 20px;
-    padding: 5px;
-    border-radius: 5px;
-}
 #subTitle{
     font-size: 30px;
     color: white;
     margin-top:0;
+}
+.pie{
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+}
+.pieHead{
+    color: white;
+    text-align: center;
+    margin: 0;
+    background-color: rgb(50, 50, 50);
+    padding: 5px;
 }
 @media (max-width:650px){
     .stopBtn, .startBtn{

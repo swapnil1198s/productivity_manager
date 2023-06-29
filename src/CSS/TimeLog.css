@@ -1,0 +1,63 @@
+.log{
+    width: 50%;
+    padding: 10px;
+    height: 95%;
+}
+.itemList{
+    background-color: rgba(226, 43, 43, 0.231);
+    border-radius: 0 0 5px 5px;
+    max-height: 90%;
+    overflow-y: scroll;
+}
+.itemList::-webkit-scrollbar{
+    width: 0.5vw;
+    background-color: transparent;
+}
+.itemList::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.logItem{
+    margin: 1vh 1vw;
+    min-height: 2vh;
+    background-color: white;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.taskName{
+    position: absolute;
+    left: 5px;
+    font-size: 20px;
+    margin: 0.5vh;
+}
+.taskTime{
+    position: absolute;
+    right: 5px;
+    font-size: 20px;
+}
+.projectName{
+    background-color: rgb(0, 88, 176);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 0;
+}
+#logTitle{
+    color: white;
+    text-align: center;
+    background-color: rgb(50, 50, 50);
+    margin: 0;
+    padding: 5px;
+}
+.custom-tooltip p{
+    background-color: white;
+    font-weight: bold;
+    padding: 5px;
+}

@@ -1,14 +1,24 @@
 import React, {useState, useEffect} from "react";
 import '../CSS/Tracker.css'
+import TimeLog from "./TimeLog";
+import PieChartComp from "./PieChartComp";
 
 const Tracker = ({setPage}) => {
     const[timerRunning, setTimerRunning] = useState(false);
     const [timer, setTimer] = useState(0);
     const [log, setLog] = useState([]);
     const [task, setTask] = useState('');
-    const [project, setProject] = useState('');
-    const [projectList, setProjectList] = useState(['Project 1', 'Project 2']);
-
+    const [project, setProject] = useState('None');
+    const [projectList, setProjectList] = useState(['None']);
+    const pieData = log.reduce((acc, logEntry) => {
+        const existingProject = acc.find(item => item.name === logEntry.project);
+        if (existingProject) {
+            existingProject.value += logEntry.time;
+        } else {
+            acc.push({ name: logEntry.project, value: logEntry.time });
+        }
+        return acc;
+    }, []);
     const handleClick = () =>{
         if(timerRunning===false){
             setTimerRunning(true);
@@ -76,13 +86,12 @@ const Tracker = ({setPage}) => {
                     <div className="projectAdd" onClick={addProject}>Add New Project</div>
                 </div>
             </div>
-            
-            <div className="log">
-                <h2>Time Log</h2>
-                {log.length>0 && [...log].reverse().map((item, index) => (
-                    <div className="logItem" key={index}> {item.project} {item.task + " " + formatTimer(item.time)}</div>
-                ))}
-                    
+            <div className="logContainer">
+                <TimeLog log={log} formatTimer={formatTimer}/>
+                <div className="pie">
+                    <h2 className="pieHead">Project Distribution</h2>
+                    <PieChartComp data={pieData}/>
+                </div>
             </div>
         </div>
     );
