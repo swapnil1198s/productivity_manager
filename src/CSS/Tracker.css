@@ -71,7 +71,7 @@ h1{
     width: 10vw;
 }
 .logContainer{
-    height: 70vh;
+    height: 100vh;
     width: 80vw;
     background-color: rgba(255, 255, 255, 0.474);
     margin: 2vh 0;
@@ -123,12 +123,27 @@ h1{
     color: white;
     margin-top:0;
 }
-.pie{
-    width: 50%;
-    height: 50%;
+.dayDropdown{
+    width: 100%;
+    text-align: center;
+}
+.charts{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.pieCont{
+    width: 100%;
+    height: 40%;
     padding: 10px;
 }
-.pieHead{
+.barCont{
+    width: 100%;
+    padding: 10px;
+    margin-top: 2vh;
+}
+.chartHead{
     color: white;
     text-align: center;
     margin: 0;

@@ -3,9 +3,10 @@ import "../CSS/PieChartComp.css"
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-const CustomTooltip = ({ active, payload }) => {
+
+/*Custom component for the tooltip content in order to display values of each section in percentages*/
+const CustomTooltip = ({ active, payload, total }) => {
     if (active) {
-        const total = payload.reduce((result, entry) => result + entry.value, 0);
         return (
             <div className="custom-tooltip">
                 <p className="label">{`${payload[0].name}: ${((payload[0].value / total) * 100).toFixed(2)}%`}</p>
@@ -15,8 +16,9 @@ const CustomTooltip = ({ active, payload }) => {
     return null;
 };
 const PieChartComp = ({data}) => {
+    const totalTime = data.reduce(((total, entry)=>total + entry.value), 0); /*initial totalTime = 0 ; end value = sum(all logged time)*/
     return(
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height="90%">
             <PieChart className="chartP">
                 <Pie
                     data={data}
@@ -30,7 +32,7 @@ const PieChartComp = ({data}) => {
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}/>
                     ))}
                 </Pie>
-                <Tooltip content={<CustomTooltip/>}/>
+                <Tooltip content={<CustomTooltip total={totalTime}/>}/>
             </PieChart>
         </ResponsiveContainer>
     )
