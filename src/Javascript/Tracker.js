@@ -1,18 +1,18 @@
 import React, {useState, useEffect} from "react";
-import '../CSS/Tracker.css'
+import '../CSS/Tracker.css';
 import TimeLog from "./TimeLog";
 import PieChartComp from "./PieChartComp";
 import BarChartComp from "./BarChartComp";
 
 const Tracker = ({setPage}) => {
     const dummyLog = [
-        {time: 300, task: 'Task A', project:'Project A', Day: 'Monday'},
-        {time: 300, task: 'Task A', project:'Project B', Day: 'Tuesday'},
-        {time: 300, task: 'Task A', project:'Project A', Day: 'Wednesday'},
-        {time: 300, task: 'Task A', project:'Project C', Day: 'Thursday'},
-        {time: 300, task: 'Task A', project:'Project B', Day: 'Friday'},
+        {time: 100, task: 'Task A', project:'Project A', Day: 'Monday'},
+        {time: 200, task: 'Task A', project:'Project B', Day: 'Tuesday'},
+        {time: 350, task: 'Task A', project:'Project A', Day: 'Wednesday'},
+        {time: 150, task: 'Task A', project:'Project C', Day: 'Thursday'},
+        {time: 2500, task: 'Task A', project:'Project B', Day: 'Friday'},
         {time: 300, task: 'Task A', project:'Project A', Day: 'Saturday'},
-        {time: 300, task: 'Task A', project:'Project D', Day: 'Sunday'},
+        {time: 500, task: 'Task A', project:'Project D', Day: 'Sunday'},
     ];
     
     const[timerRunning, setTimerRunning] = useState(false);
@@ -21,7 +21,7 @@ const Tracker = ({setPage}) => {
     const [task, setTask] = useState('');
     const [project, setProject] = useState('None');
     const [projectList, setProjectList] = useState(['None']);
-    const [day, setDay] = useState('Monday');  // Add state for day
+    const [day, setDay] = useState('Monday');
 
     /*Format data for Pie Chart*/
     const pieData = log.reduce((data, logEntry) => {
@@ -148,16 +148,18 @@ const Tracker = ({setPage}) => {
             </div>
             {/* The charts based on log data */}
             <div className="logContainer">
-                <TimeLog log={log} formatTimer={formatTimer}/>
-                <div className="charts">
-                    <div className="pieCont">
-                        <h2 className="chartHead">Project Distribution</h2>
-                        <PieChartComp data={pieData}/>
+                <div className="logRow">
+                    <TimeLog log={log} formatTimer={formatTimer}/>
+                    <div className="charts">
+                        <div className="pieCont">
+                            <h2 className="chartHead">Project Distribution</h2>
+                            <PieChartComp data={pieData}/>
+                        </div>
                     </div>
-                    <div className="barCont">
-                        <h2 className="chartHead">Weekly Distribution</h2>
-                        <BarChartComp data={barChartData}/>
-                    </div>
+                </div>
+                <div className="barCont">
+                    <h2 className="chartHead">Weekly Distribution</h2>
+                    <BarChartComp data={barChartData}/>
                 </div>
             </div>
         </div>

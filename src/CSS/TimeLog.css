@@ -1,12 +1,12 @@
 .log{
     width: 45%;
     padding: 10px;
-    height: 95%;
+    height: 100%;
 }
 .itemList{
     background-color: rgba(226, 43, 43, 0.231);
     border-radius: 0 0 5px 5px;
-    max-height: 90%;
+    height: 90%;
     overflow-y: scroll;
 }
 .itemList::-webkit-scrollbar{
