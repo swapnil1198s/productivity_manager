@@ -61,3 +61,11 @@
     font-weight: bold;
     padding: 5px;
 }
+
+@media (max-width:650px) {
+    .log{
+        width: 95%;
+        padding: 10px;
+        height: 50vh;
+    }
+}

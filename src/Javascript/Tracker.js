@@ -123,13 +123,15 @@ const Tracker = ({setPage}) => {
         <div className="tracker">
             <h1 id="title">"Time Is The Seed Of The Universe." <p id="subTitle">~ The Bhagavad Gita</p></h1>
             <div className="ticker">
-                <div className="container">
-                    {timerRunning===false && <div onClick={handleClick} className="startBtn">
-                    </div>}
-                    {timerRunning===true && <div onClick={handleClick} className="stopBtn">
-                    </div>}
+                <div className="timerCont">
+                    <div className="container">
+                        {timerRunning===false && <div onClick={handleClick} className="startBtn">
+                        </div>}
+                        {timerRunning===true && <div onClick={handleClick} className="stopBtn">
+                        </div>}
+                    </div>
+                    <div className="timer">{formatTimer(timer)}</div>
                 </div>
-                <div className="timer">{formatTimer(timer)}</div>
                 {/* <div className="clear" onClick={()=>setTimer(0)}>Clear</div> */}
                 <div className="project">
                       <input className="task" type="text" value={task} placeholder="Enter Task Name" onChange={handleTaskChange}/>
